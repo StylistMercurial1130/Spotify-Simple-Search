@@ -12,7 +12,7 @@ simple spotify searcher using python 3.8
 # Autherization 
 
 A client id and a client secret id is to be entered for autherization 
-```
+```python
 def __init__(self,client_id,client_secret,tokenURL,*args,**kwargs):
         super().__init__(*args,**kwargs)
 
@@ -25,7 +25,7 @@ def __init__(self,client_id,client_secret,tokenURL,*args,**kwargs):
 
 Spotify API being a class, when a object is made of the class the autherization is handled and there is no need to autherize manually 
 
-```
+```python
 def Authorize(self):
         tokenURL = self.tokenURL
         tokenData = self.GetTokenData()
@@ -50,7 +50,7 @@ def Authorize(self):
 # Capability of the Spotify Simple Search
 As the name suggests being a simple search, the search capability is not vast and modular. Only cerain query can be searched for based on a searchtype. the data returned is in the form of a python dictionary. the contents of the dictionry are according to the search type 
 
-```
+```pyhton
  keyreference_albums = [
         'album_type',
         'artists',
@@ -79,7 +79,7 @@ As the name suggests being a simple search, the search capability is not vast an
     ]
 ```
 
-```
+```python
 def GenerateSearchDict(self,resDict):
         
         search_type = None
