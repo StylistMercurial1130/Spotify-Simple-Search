@@ -9,9 +9,10 @@ simple spotify searcher using python 3.8
 4. urlibparse
 
 
-# Autherization 
+# Authorization 
 
 A client id and a client secret id is to be entered for autherization 
+
 ```python
 def __init__(self,client_id,client_secret,tokenURL,*args,**kwargs):
         super().__init__(*args,**kwargs)
@@ -47,7 +48,7 @@ def Authorize(self):
             raise Exception('autherization error ! Error'+str(Request.status_code))
 ```
 
-# Capability of the Spotify Simple Search
+## Capability of the Spotify Simple Search
 As the name suggests being a simple search, the search capability is not vast and modular. Only cerain query can be searched for based on a searchtype. the data returned is in the form of a python dictionary. the contents of the dictionry are according to the search type 
 
 ```pyhton
@@ -112,6 +113,6 @@ def GenerateSearchDict(self,resDict):
 
         return dataDict
 ```
-along with the source code an example code is attached to better understand the capabilities of the spotify simple search 
+Along with the source code an example snippet is attached to better understand the capabilities of the spotify simple search 
 
-any improvement is welcomed 
+Any improvement is welcomed :)
